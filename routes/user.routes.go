@@ -7,6 +7,6 @@ import (
 )
 
 func userRouteHandler(router *gin.RouterGroup){
-	router.GET("/",controller.UserController)
+	router.POST("/",controller.UserController)
 
 }

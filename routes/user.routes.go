@@ -1,12 +1,11 @@
 package routes
 
 import (
-
-	"github.com/PratikShekhar/FreshFusionServer/controller"
-	"github.com/gin-gonic/gin"
+"github.com/gin-gonic/gin"
+"github.com/PratikShekhar/FreshFusionServer/controller/user"
 )
 
 func userRouteHandler(router *gin.RouterGroup){
-	router.POST("/",controller.UserController)
-
+	router.POST("/",user.POST)
+router.GET("/",user.GET)
 }

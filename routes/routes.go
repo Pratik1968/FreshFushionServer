@@ -1,7 +1,6 @@
 package routes
 
 import (
-
 	"github.com/gin-gonic/gin"
 )
 
@@ -11,6 +10,10 @@ root := router.Group("/api")
  userRoute := root.Group("/user")
 {
 userRouteHandler(userRoute)
+}
+productRoute := root.Group("/product")
+{
+	productRouteHandler(productRoute)
 }
  }
 }

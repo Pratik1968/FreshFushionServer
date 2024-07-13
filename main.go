@@ -7,13 +7,10 @@ import (
 )
 
 func main() {
-    // initiates a gin Engine with the default logger and recovery middleware
-    database := db.DbStruct{}
-    database.Init()
-    
-    router := gin.Default(
+ db.Init()
+    router := gin.Default()
 
-    )
 routes.Route(router)
+router.Static("/product_images","./product_images")
     router.Run(":3000")
 }
